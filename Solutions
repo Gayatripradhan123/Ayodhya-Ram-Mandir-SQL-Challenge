@@ -1,0 +1,52 @@
+1) Retrieve information about the Ram Mandir?
+SELECT * FROM Temple;
+
+
+2) List all construction phases for the Ram Mandir?
+SELECT phaseid, phasename FROM ConstructionPhase;
+
+
+3) Find the total amount of donations received for the Ram Mandir?
+SELECT sum(amount) as total_amount from Donations;
+
+
+4) Get details about the architecture of the Ram Mandir?
+SELECT * FROM Architecture;
+
+
+5) Retrieve events associated with the Ram Mandir?
+SELECT te.templeid, te.eventid, e.eventname
+FROM TempleEvents as TE
+INNER JOIN Events as E
+on TE.eventid = E.EventID;
+
+
+6) Find donors who contributed more than 50000 towards the Ram Mandir?
+SELECT donorname, amount
+FROM Donations 
+WHERE amount > 50000;
+
+
+7) Retrieve details about a specific deity (e.g., Rama) ?
+SELECT * FROM Deity
+WHERE name = 'Rama';
+
+
+8) Find the start and end dates of the construction phases for the Ram Mandir?
+SELECT phasename, startdate, completiondate 
+FROM ConstructionPhase as cp
+INNER JOIN Temple as t
+on cp.TempleID = t.templeid
+WHERE t.name = 'Ram Mandir';
+
+
+9) Count the number of events associated with each temple?
+SELECT t.name, cOUNT(te.eventid) as no_of_events
+FROM Temple as t
+JOIN TempleEvents as te
+on t.templeid = te.TempleID;
+
+10) Find the donors who made contributions on or after '2021-06-01'?
+SELECT donorname, donationdate
+FROM Donations 
+WHERE donationdate >= '2021-06-01';
