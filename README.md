@@ -1,9 +1,9 @@
 # Ayodhya-Ram-Mandir-SQL-Challenge
 
-#Challenge:
+# Challenge:
 Your challenge is to craft SQL queries to extract insights from the Ayodhya Ram Temple database.
 
-#Tables: 
+# Tables: 
 1. Deity
 2. Temple
 3. ConstructionPhase
@@ -12,7 +12,7 @@ Your challenge is to craft SQL queries to extract insights from the Ayodhya Ram 
 6. Events
 7. TempleEvents
 
-#Questions: 
+# Questions: 
 1) Retrieve information about the Ram Mandir?
 2) List all construction phases for the Ram Mandir?
 3) Find the total amount of donations received for the Ram Mandir?
